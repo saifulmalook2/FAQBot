@@ -29,5 +29,5 @@ async def faq_response(data: faq):
     question = data_doc['question']
     uid = data_doc['uid']
     response = await generate_response(uid, question)
-    return response
+    return {"AI_response" : response}
     
