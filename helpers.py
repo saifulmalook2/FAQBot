@@ -52,6 +52,7 @@ async def process_chat(chain, question, chat_history):
     
     answer = response['answer']
 
+    print("context", response['context'])
     return answer
 
 
