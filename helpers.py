@@ -52,7 +52,9 @@ async def process_chat(chain, question, chat_history):
     
     answer = response['answer']
 
-    print("context", response['context'])
+    for docs in response["context"]:
+        print("content:", docs.page_content)
+        
     return answer
 
 
